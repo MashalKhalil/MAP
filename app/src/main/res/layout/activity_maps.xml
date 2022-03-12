@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/b"
+    android:orientation="vertical"
+    android:weightSum="8">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="8"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/b1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:backgroundTint="#39F40FC2"
+            android:onClick="onNormalMap"
+            android:text="Normal"
+            android:textColor="#00ECFF"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/b2"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:backgroundTint="#39F40FC2"
+            android:onClick="onSatelliteMap"
+            android:text="Satellite"
+            android:textColor="#00ECFF"
+            android:textSize="16sp" />
+
+        <Button
+            android:id="@+id/b3"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:backgroundTint="#39F40FC2"
+            android:onClick="onTerrainMap"
+            android:text="Terrain"
+            android:textColor="#00ECFF"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/b4"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:backgroundTint="#39F40FC2"
+            android:onClick="onHybridMap"
+            android:text="Hybrid"
+            android:textColor="#00ECFF"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+    <fragment
+        android:id="@+id/map"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="664dp"
+        android:layout_gravity="center"
+        android:layout_weight="6"
+        tools:context="com.viralandroid.googlemapsandroidapi.MapsActivity" />
+
+</LinearLayout>
